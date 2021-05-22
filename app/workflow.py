@@ -21,7 +21,7 @@ def probs_to_json(probs):
 
 
 def make_prediction(data: Data):
-    model = load(r'app\tree.joblib')
+    model = load(os.path.join('app', 'tree.joblib'))
     probs = model.predict_proba([json_to_features(data)])[0]
     print(len(probs))
     return {'probs': probs_to_json(probs)}
