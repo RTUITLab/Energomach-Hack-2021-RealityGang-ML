@@ -52,7 +52,7 @@ def __field_to_features__(field, encoder, max_number):
         if len(field) < max_number:
             features += [0] * (max_number - len(field))
     else:
-        features += encoder['-1'] + [0] * (max_number - 1)
+        features += [encoder['-1']] + [0] * (max_number - 1)
     return features
 
 def json_to_features(json_data):
