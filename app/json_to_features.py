@@ -1,37 +1,39 @@
 import json
+import os
+from posixpath import join
 
 
-with open(r'jsons\kbk.json', 'r') as f:
+with open(os.path.join('jsons', 'kbk.json'), 'r') as f:
     index_to_kbk = json.load(f)
     kbk_to_index = {val: int(key) for key, val in index_to_kbk.items()}
 
     
-with open(r'jsons\acting.json', 'r') as f:
+with open(os.path.join('jsons','acting.json'), 'r') as f:
     index_to_acting = json.load(f)
     acting_to_index = {val: int(key) for key, val in index_to_acting.items()}
 
-    
-with open(r'jsons\attr.json', 'r') as f:
+
+with open(os.path.join('jsons','attr.json'), 'r') as f:
     index_to_attr = json.load(f)
     attr_to_index = {val: int(key) for key, val in index_to_attr.items()}
 
     
-with open(r'jsons\forma.json', 'r') as f:
+with open(os.path.join('jsons','forma.json'), 'r') as f:
     index_to_forma = json.load(f)
     forma_to_index = {val: int(key) for key, val in index_to_forma.items()}
 
 
-with open(r'jsons\ocved.json', 'r') as f:
+with open(os.path.join('jsons', 'ocved.json'), 'r') as f:
     index_to_ocved = json.load(f)
     ocved_to_index = {val: int(key) for key, val in index_to_ocved.items()}
 
 
-with open(r'jsons\otrasl.json', 'r') as f:
+with open(os.path.join('jsons', 'otrasl.json'), 'r') as f:
     index_to_otrasl = json.load(f)
     otrasl_to_index = {val: int(key) for key, val in index_to_otrasl.items()}
 
 
-with open(r'jsons\region.json', 'r') as f:
+with open(os.path.join('jsons', 'region.json'), 'r') as f:
     index_to_region = json.load(f)
     region_to_index = {val: int(key) for key, val in index_to_region.items()}
     

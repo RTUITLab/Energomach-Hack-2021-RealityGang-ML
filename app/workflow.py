@@ -1,4 +1,5 @@
 import json
+import os
 
 from  joblib import load
 
@@ -6,7 +7,7 @@ from .models import Data
 from .json_to_features import json_to_features
 
 
-with open(r'jsons\kbk.json', 'r') as f:
+with open(os.path.join('jsons', 'kbk.json'), 'r') as f:
     index_to_kbk = json.load(f)
     kbk_to_index = {val: int(key) for key, val in index_to_kbk.items()}
 
