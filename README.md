@@ -1,4 +1,4 @@
-# ML Servise for GISP
+# ML Service for GISP
 
 ## Installation
 ```
